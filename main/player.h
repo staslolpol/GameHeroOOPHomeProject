@@ -9,7 +9,7 @@ public:
 	int state_stamina;
 	int state_agility;
 	int state_intelligence;
-	int free_state_point = (level * 3)- (state_agility + state_intelligence + state_power + state_stamina);
+	int free_state_point;
 
 
 	string name_player;
@@ -19,7 +19,7 @@ public:
 
 	string toString() {
 		string msg = "Name player: " + name_player + "\n";
-		msg += " Title of player: " + title + "\n";
+		msg += "Title of player: " + title + "\n";
 		msg += "Age of character: " + to_string(age) + "\n";
 		msg += "Name guilde: " + guild_name + "\n";
 		msg += "Level of player " + to_string(level) + "\n";
