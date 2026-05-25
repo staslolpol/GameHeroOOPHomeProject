@@ -2,6 +2,8 @@
 
 int main() {
 	player player_1;
+	
+	cout << "------create new player------" << endl;
 
 	cout << "Input name of player: ";
 	cin >> player_1.name_player;
