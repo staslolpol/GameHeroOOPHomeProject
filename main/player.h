@@ -3,6 +3,8 @@
 class player {
 public:
 
+	int number_of_skills = NUMBER_OF_SKILLS;
+
 	int level;
 	int age;
 	int state_power;
@@ -22,7 +24,7 @@ public:
 		level = 0;
 		age = 0;
 		state_power = 0;
-		state_staminav = 0;
+		state_stamina = 0;
 		state_agility = 0;
 		state_intelligence = 0;
 		free_state_point = 0;
@@ -30,7 +32,7 @@ public:
 		classes = "";
 		guild_name = "";
 		title = "";
-		skills = new string[NUMBER_OF_SKILLS]{"", "", "",};
+		skills = new string[number_of_skills]{ "", "", "", };
 	}
 
 
@@ -40,7 +42,7 @@ public:
 		level = lv;
 		age = ag;
 		state_power = st_p;
-		state_staminav = st_s;
+		state_stamina = st_s;
 		state_agility = st_a;
 		state_intelligence = st_i;
 		free_state_point = fr_st;
@@ -48,21 +50,21 @@ public:
 		classes = cls;
 		guild_name = gld_nm;
 		title = tl;
-		skills = new string[NUMBER_OF_SKILLS]{ "", "", "", };
+		skills = new string[number_of_skills]{ "", "", "", };
 
 
 	}
 
-	player(const Student& student) {
+	player(const player& player) {
 		//Copy constract
 		level = player.level;
 		age = player.age;
 		state_power = player.state_power;
-		state_staminav = player.state_stamina;
+		state_stamina = player.state_stamina;
 		state_agility = player.state_agility;
 		state_intelligence = player.state_intelligence;
 		free_state_point = player.free_state_point;
-		name_player = player.string name_player;
+		name_player = player.name_player;
 		classes = player.classes;
 		guild_name = player.guild_name;
 		title = player.title;
@@ -81,25 +83,25 @@ public:
 
 
 	string toString() {
-		string msg = "------player: " + name_player + " ------\n";
-		msg += "------title: " + title + "------\n";
-		msg += "------Age: " + to_string(age) + "------\n";
-		msg += "------guilde: " + guild_name + "------\n";
-		msg += "------level " + to_string(level) + "------\n";
-		msg += "------classes: " + classes + "------\n";
-		msg += "------staste------";
-		msg += "------power: " + to_string(state_power) + "------\n";
-		msg += "------stamina: " + to_string(state_stamina) + "------\n";
-		msg += "------agility: " + to_string(state_agility) + "------\n";
-		msg += "------intelligence: " + to_string(state_intelligence) + "------\n";
-		msg += "------free state points: " + to_string(free_state_point) + "------\n";
-			msg += "------skills------";
-		for (int i = 0; i < NUMBER_OF_SKILLS; i++) {
-			msg += "------" skills[i] + "\n";
+		string msg = "------player:" + name_player + " \n";
+		msg += "------title:" + title + "\n";
+		msg += "------Age:" + to_string(age) + "\n";
+		msg += "------guilde:" + guild_name + "\n";
+		msg += "------level" + to_string(level) + "\n";
+		msg += "------classes:" + classes + "\n";
+		msg += "------staste------\n";
+		msg += "------power:" + to_string(state_power) + "\n";
+		msg += "------stamina:" + to_string(state_stamina) + "\n";
+		msg += "------agility:" + to_string(state_agility) + "\n";
+		msg += "------intelligence:" + to_string(state_intelligence) + "\n";
+		msg += "------free state points:" + to_string(free_state_point) + "\n";
+		msg += "------skills------\n";
+		for (int i = 0; i < number_of_skills; i++) {
+			msg += "------skill number " + to_string(i + 1) + ':' + skills[i] + "\n";
 		}
-		msg += "------\n";
 
-			return msg;
+
+		return msg;
 	}
 
 };

@@ -2,7 +2,9 @@
 
 int main() {
 	player player_1;
-	
+
+	int number_of_skills = NUMBER_OF_SKILLS;
+
 	cout << "------create new player------" << endl;
 
 	cout << "Input name of player: ";
@@ -40,14 +42,15 @@ int main() {
 	player_1.free_state_point = (player_1.level * 3) - (player_1.state_agility + player_1.state_intelligence
 		+ player_1.state_power + player_1.state_stamina);
 
-	for (int i = 0; i < NUMBER_OF_SKILLS; i++)
+	for (int i = 0; i < number_of_skills; i++)
 	{
-		Cout << "Input skill number " << i << ": ";
+		cout << "Input skill number " << i + 1 << ": ";
 		cin >> player_1.skills[i];
 	}
 
+
 	cout << "--------------------------------------------------------------------------------------------------";
-	
+
 	cout << "\nInfo about your player account:" << endl;
 
 	cout << player_1.toString();
