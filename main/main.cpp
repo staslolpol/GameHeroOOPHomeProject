@@ -25,7 +25,7 @@ int main() {
 	cout << "Input class of player: ";
 	cin >> player_1.classes;
 
-	cout << "Sum of all state not more your level * 3" << endl;
+	cout << "Sum of all state not more " << level * 3 << endl;
 
 	cout << "Input how mant point in state power of player: ";
 	cin >> player_1.state_power;
