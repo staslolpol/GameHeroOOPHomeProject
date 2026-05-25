@@ -3,25 +3,25 @@
 class player {
 public:
 
-	int level
-		int age
-		int state_power
-		int state_stamina
-		int state_agility
-		int state_intelligence
-		int free_state_point
+	int level;
+	int age;
+	int state_power;
+	int state_stamina;
+	int state_agility;
+	int state_intelligence;
+	int free_state_point;
 
-
-		string name_player
-		string classes03d.0
-		string guild_name
-		string title
+	string name_player;
+	string classes;
+	string guild_name;
+	string title;
 
 	player() {
+		// default constructor
 		level = 0;
 		age = 0;
 		state_power = 0;
-		state_staminav
+		state_staminav = 0;
 		state_agility = 0;
 		state_intelligence = 0;
 		free_state_point = 0;
@@ -29,8 +29,41 @@ public:
 		classes = "";
 		guild_name = "";
 		title = "";
-
 	}
+	
+
+	//canonical constructor
+	Student(int lv, int ag, int st_p, int st_s, int st_a, int st_i,
+		int fr_st, string nm, string cls, string gld_nm, string tl){
+		level = lv;
+		age = ag;
+		state_power = st_p;
+		state_staminav = st_s;
+		state_agility = st_a;
+		state_intelligence = st_i;
+		free_state_point = fr_st;
+		name_player = nm;
+		classes = cls;
+		guild_name = gld_nm;
+		title = tl;
+		
+	}
+
+	Student(const Student& student) {
+		//Copy constract
+		level = player.level;
+		age = player.age;
+		state_power = player.state_power;
+		state_staminav = player.state_stamina;
+		state_agility = player.state_agility;
+		state_intelligence = player.state_intelligence;
+		free_state_point = player.free_state_point;
+		name_player = player.string name_player;
+		classes = player.classes;
+		guild_name = player.guild_name;
+		title = player.title;
+	}
+
 
 	string toString() {
 		string msg = "Name player: " + name_player + "\n"
