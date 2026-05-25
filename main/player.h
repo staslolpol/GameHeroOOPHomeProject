@@ -81,22 +81,23 @@ public:
 
 
 	string toString() {
-		string msg = "Name player: " + name_player + "\n";
-		msg += "Title of player: " + title + "\n";
-		msg += "Age of character: " + to_string(age) + "\n";
-		msg += "Name guilde: " + guild_name + "\n";
-		msg += "Level of player " + to_string(level) + "\n";
-		msg += "Player classes: " + classes + "\n";
-		msg += "State power: " + to_string(state_power) + "\n";
-		msg += "State stamina: " + to_string(state_stamina) + "\n";
-		msg += "State agility: " + to_string(state_agility) + "\n";
-		msg += "State intelligence: " + to_string(state_intelligence) + "\n";
-		msg += "Free state points: " + to_string(free_state_point) + "\n";
-			msg += "skills: ";
+		string msg = "------player: " + name_player + " ------\n";
+		msg += "------title: " + title + "------\n";
+		msg += "------Age: " + to_string(age) + "------\n";
+		msg += "------guilde: " + guild_name + "------\n";
+		msg += "------level " + to_string(level) + "------\n";
+		msg += "------classes: " + classes + "------\n";
+		msg += "------staste------";
+		msg += "------power: " + to_string(state_power) + "------\n";
+		msg += "------stamina: " + to_string(state_stamina) + "------\n";
+		msg += "------agility: " + to_string(state_agility) + "------\n";
+		msg += "------intelligence: " + to_string(state_intelligence) + "------\n";
+		msg += "------free state points: " + to_string(free_state_point) + "------\n";
+			msg += "------skills------";
 		for (int i = 0; i < NUMBER_OF_SKILLS; i++) {
-			msg += skills[i] + ", ";
+			msg += "------" skills[i] + "\n";
 		}
-		msg += "\n";
+		msg += "------\n";
 
 			return msg;
 	}
