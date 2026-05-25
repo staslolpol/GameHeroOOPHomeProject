@@ -30,7 +30,7 @@ public:
 		classes = "";
 		guild_name = "";
 		title = "";
-		skills = new string[3]{"", "", "",};
+		skills = new string[NUMBER_OF_SKILLS]{"", "", "",};
 	}
 
 
@@ -48,7 +48,7 @@ public:
 		classes = cls;
 		guild_name = gld_nm;
 		title = tl;
-		skills = new string[3]{ "", "", "", };
+		skills = new string[NUMBER_OF_SKILLS]{ "", "", "", };
 
 
 	}
@@ -93,7 +93,7 @@ public:
 		msg += "State intelligence: " + to_string(state_intelligence) + "\n";
 		msg += "Free state points: " + to_string(free_state_point) + "\n";
 			msg += "skills: ";
-		for (int i = 0; i < 3; i++) {
+		for (int i = 0; i < NUMBER_OF_SKILLS; i++) {
 			msg += skills[i] + ", ";
 		}
 		msg += "\n";
