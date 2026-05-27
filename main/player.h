@@ -38,11 +38,37 @@ public:
 
 	~player();
 
+	//get
+	string get_name_player();
+	string get_title();
+	string get_guild_name();
+	string get_classes();
+	string* get_skills();
+
+	int get_age();
+	int get_level();
+	int get_state_power();
+	int get_state_stamina();
+	int get_state_agility();
+	int get_state_intelligence();
+	int get_free_state_point();
+
+	//set
+	void set_name_player(string nm);
+	void set_title(string tl);
+	void set_guild_name(string gld_nm);
+	void set_classes(string cls);
+	void set_skills(string* skl, int size);
+
+	void set_age(int ag);
+	void set_level(int lv);
+	void set_state_power(int st_p);
+	void set_state_stamina(int st_s);
+	void set_state_agility(int st_a);
+	void set_state_intelligence(int st_i);
+	void set_free_state_point(int fr_st);
+
 
 	string toString();
-
-
-		return msg;
-	}
 
 };

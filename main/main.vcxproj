@@ -125,10 +125,13 @@
   <ItemGroup>
     <ClCompile Include="logic.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="player.cpp" />
+    <ClCompile Include="goblin.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="logic.h" />
     <ClInclude Include="player.h" />
+    <ClInclude Include="goblin.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
