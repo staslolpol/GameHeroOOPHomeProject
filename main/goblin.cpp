@@ -5,7 +5,7 @@ goblin::goblin() {
 }
 
 int goblin::get_random_level_gobline(int level_player) {
-	int golin_level = rand() % ((level_player + 5) - (level_player - 2) + 1);
+	int golin_level = rand() % ((level_player -5 ) - (level_player + 2) + 1);
 	
 	return golin_level;
 }
