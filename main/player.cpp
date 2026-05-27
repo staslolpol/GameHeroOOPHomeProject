@@ -2,17 +2,17 @@
 
 player::player() {
 	// default constructor
-	level = 0;
-	age = 0;
+	level = 1;
+	age = 1;
 	state_power = 0;
 	state_stamina = 0;
 	state_agility = 0;
 	state_intelligence = 0;
 	free_state_point = 0;
-	name_player = "";
-	classes = "";
-	guild_name = "";
-	title = "";
+	name_player = "no name";
+	classes = "none";
+	guild_name = "none";
+	title = "noob";
 	skills = new string[number_of_skills]{ "", "", "", };
 }
 
