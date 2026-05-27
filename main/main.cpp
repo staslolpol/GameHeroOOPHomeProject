@@ -1,4 +1,3 @@
-#include "player.h"
 #include "goblin.h"
 
 
@@ -87,7 +86,7 @@ int main() {
 	cout << "--------------------------------------------------------------------------------------------------";
 	cout << "Please press Enter.";
 
-	system("sleep");
+	//system("pause");
 
 	system("cls");
 

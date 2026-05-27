@@ -166,7 +166,7 @@ string player::toString() {
 	
 
 	void player::set_age(int ag) {
-		age = age;
+		age = ag;
 	}
 
 	void player::set_level(int lv) {

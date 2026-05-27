@@ -21,12 +21,8 @@ public:
 
 	int number_of_skills = NUMBER_OF_SKILLS;
 
-	
-
 	player();
 		// default constructor
-		
-
 
 	//canonical constructor
 	player(int lv, int ag, int st_p, int st_s, int st_a, int st_i,
