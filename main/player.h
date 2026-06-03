@@ -25,8 +25,8 @@ public:
 		// default constructor
 
 	//canonical constructor
-	player(int lv, int ag, int st_p, int st_s, int st_a, int st_i,
-		int fr_st, string nm, string cls, string gld_nm, string tl, string skl);
+	player(int level, int age, int st_p, int state_stamina, int state_agility, int st_i,
+		int free_state_point, string name_player, string classes, string guild_name, string title, string skills);
 
 	player(const player& player);
 		//Copy constract
@@ -50,19 +50,19 @@ public:
 	int get_free_state_point();
 
 	//set
-	void set_name_player(string nm);
-	void set_title(string tl);
-	void set_guild_name(string gld_nm);
-	void set_classes(string cls);
-	void set_skills(string* skl, int size);
+	void set_name_player(string name);
+	void set_title(string title);
+	void set_guild_name(string guild_name);
+	void set_classes(string classes);
+	void set_skills(string* skills, int size);
 
-	void set_age(int ag);
-	void set_level(int lv);
-	void set_state_power(int st_p);
-	void set_state_stamina(int st_s);
-	void set_state_agility(int st_a);
-	void set_state_intelligence(int st_i);
-	void set_free_state_point(int fr_st);
+	void set_age(int age);
+	void set_level(int level);
+	void set_state_power(int state_power);
+	void set_state_stamina(int state_stamina);
+	void set_state_agility(int st_agility);
+	void set_state_intelligence(int state_intelligence);
+	void set_free_state_point(int free_state_point);
 
 
 	string toString();

@@ -2,22 +2,22 @@
 #include "Monster.h"
 
 
-class goblin : public Monster
+class Orc : public Monster
 {
 
 
 public:
 
-	goblin();
+	Orc();
 
 	//int get_random_level(int level_player);
 
-	int get_goblin_level();
+	int get_orc_level();
 
 
 	bool is_live(int level, int level_player);
 
-	void set_goblin_level(int level);
+	void set_orc_level(int level);
 
 };
 

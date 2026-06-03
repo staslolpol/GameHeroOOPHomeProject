@@ -18,20 +18,20 @@ player::player() {
 
 
 //canonical constructor
-player::player(int lv, int ag, int st_p, int st_s, int st_a, int st_i,
-	int fr_st, string nm, string cls, string gld_nm, string tl, string skl) {
-	level = lv;
-	age = ag;
-	state_power = st_p;
-	state_stamina = st_s;
-	state_agility = st_a;
-	state_intelligence = st_i;
-	free_state_point = fr_st;
-	name_player = nm;
-	classes = cls;
-	guild_name = gld_nm;
-	title = tl;
-	skills = new string[number_of_skills]{ "", "", "", };
+player::player(int level, int age, int state_power, int state_stamina, int state_agility, int st_i,
+	int free_state_point, string name_player, string classes, string guild_name, string title, string skills) {
+	this->level = level;
+	this->age = age;
+	this->state_power = state_power;
+	this->state_stamina = state_stamina;
+	this->state_agility = state_agility;
+	this->state_intelligence = st_i;
+	this->free_state_point = free_state_point;
+	this->name_player = name_player;
+	this->classes = classes;
+	this->guild_name = guild_name;
+	this->title = title;
+	this->skills = new string[number_of_skills]{ "", "", "", };
 
 
 }
@@ -59,6 +59,7 @@ player::~player() {
 	//destractor
 	if (skills != NULL) {
 		delete[] skills;
+		skills = nullptr;
 	}
 }
 
@@ -84,124 +85,122 @@ string player::toString() {
 
 }
 
-	//get
-	
-	string player::get_name_player() {
-		return name_player;
-	}
+//get
 
-	string player::get_title() {
-		return title;
-	}
+string player::get_name_player() {
+	return name_player;
+}
 
-	string player::get_guild_name() {
-		return guild_name;
-	}
+string player::get_title() {
+	return title;
+}
 
-	string player::get_classes() {
-		return classes;
-	}
+string player::get_guild_name() {
+	return guild_name;
+}
 
-	string* player::get_skills() {
-		return skills;
-	}
+string player::get_classes() {
+	return classes;
+}
 
-	int player::get_age() {
-		return age;
-	}
+string* player::get_skills() {
+	return skills;
+}
 
-	int player::get_level() {
-		return level;
-	}
+int player::get_age() {
+	return age;
+}
 
-	int player::get_state_power() {
-		return state_power;
-	}
+int player::get_level() {
+	return level;
+}
 
-	int player::get_state_stamina() {
-		return state_stamina;
-	}
+int player::get_state_power() {
+	return state_power;
+}
 
-	int player::get_state_agility() {
-		return state_agility;
-	}
+int player::get_state_stamina() {
+	return state_stamina;
+}
 
-	int player::get_state_intelligence() {
-		return state_intelligence;
-	}
+int player::get_state_agility() {
+	return state_agility;
+}
 
-	int player::get_free_state_point() {
-		return free_state_point;
-	}
+int player::get_state_intelligence() {
+	return state_intelligence;
+}
 
-	//set
+int player::get_free_state_point() {
+	return free_state_point;
+}
 
-	void player::set_name_player(string nm) {
-		name_player = nm;
-	}
+//set
 
-	void player::set_title(string tl) {
-		title = tl;
-	}
+void player::set_name_player(string name_player) {
+	this->name_player = name_player;
+}
 
-	void player::set_guild_name(string gld_nm) {
-		guild_name = gld_nm;
-	}
+void player::set_title(string title) {
+	this->title = title;
+}
 
-	void player::set_classes(string cls) {
-		classes = cls;
-	}
+void player::set_guild_name(string guild_name) {
+	this->guild_name = guild_name;
+}
 
-	void player::set_skills(string* skl, int size) {
-		if (skills != nullptr) {
-			delete[] skills;
-			skills = new string[size];
-			for (int i = 0; i < size; i++)
-			{
-				skills[i] = skl[i];
-			}
+void player::set_classes(string classes) {
+	this->classes = classes;
+}
+
+void player::set_skills(string* skills, int size) {
+	if (skills != nullptr && size > 0) {
+		delete[] this->skills;
+		this->skills = new string[size];
+		for (int i = 0; i < size; i++) {
+			this->skills[i] = skills[i];
 		}
 	}
+}
 
-	
 
-	void player::set_age(int ag) {
-		age = ag;
+void player::set_age(int age) {
+	this->age = age;
+}
+
+void player::set_level(int level) {
+	if (level > 0) {
+		this->level = level;
 	}
+}
 
-	void player::set_level(int lv) {
-		if (lv > 0) {
-			level = lv;
-		}
+void player::set_state_power(int state_power) {
+	if (state_power > -1) {
+		this->state_power = state_power;
 	}
+}
 
-	void player::set_state_power(int st_p) {
-		if (st_p > -1) {
-			state_power = st_p;
-		}
+void player::set_state_stamina(int state_stamina) {
+	if (state_stamina > -1) {
+		this->state_stamina = state_stamina;
 	}
+}
 
-	void player::set_state_stamina(int st_s) {
-		if (st_s > -1) {
-			state_stamina = st_s;
-		}
+void player::set_state_agility(int state_agility) {
+	if (state_agility > -1) {
+		this->state_agility = state_agility;
 	}
+}
 
-	void player::set_state_agility(int st_a) {
-		if (st_a > -1) {
-			state_agility = st_a;
-		}
+void player::set_state_intelligence(int state_intelligence) {
+	if (state_intelligence > -1) {
+		this->state_intelligence = state_intelligence;
 	}
+}
 
-	void player::set_state_intelligence(int st_i) {
-		if (st_i > -1) {
-			state_intelligence = st_i;
-		}
-	}
-
-	void player::set_free_state_point(int fr_st) {
-		free_state_point = fr_st;
-	}
+void player::set_free_state_point(int free_state_point) {
+	this->free_state_point = free_state_point;
+}
 
 
 

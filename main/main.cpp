@@ -1,4 +1,7 @@
 #include "goblin.h"
+#include "orc.h"
+#include "player.h"
+
 
 
 int main() {
@@ -67,6 +70,11 @@ int main() {
 
 	free_state_point = (level * 3) - (state_agility + state_intelligence
 		+ state_power + state_stamina);
+	if (free_state_point < 0) {
+		cout << "ERROR.\n A lot of points.";
+			return -1;
+}
+	
 	player_1.set_free_state_point(free_state_point);
 
 	for (int i = 0; i < number_of_skills; i++)
@@ -90,16 +98,37 @@ int main() {
 
 	system("cls");
 
+	//goblin
 	goblin goblin_1;
-	int level_goblin = goblin_1.get_random_level_gobline(level);
+	int level_goblin = goblin_1.get_random_level(level);
 
 	cout << "You met a goblin!\nGoblin is level " << level_goblin << endl;
 
-	if (goblin_1.is_live(level_goblin, level)) {
+	if (!goblin_1.is_live(level_goblin, level)) {
 		cout << "YOU LOSE !!!!";
 		return -1;
 	}
-	cout << "YOU WIN!!!\n YOU GET LEVEL UP!!!";
+	cout << "YOU WIN!!!\nYOU GET LEVEL UP!!!\n";
+
+	level += 1;
+
+	cout << "YOUR LEVEL: " << level;
+
+
+	cout << "\n--------------------------------------------------------------------------------------------------\n";
+
+
+	//orc
+	Orc orc_1;
+	int level_orc = orc_1.get_random_level(level);
+
+	cout << "You met a orc!\nOrc is level " << level_orc << endl;
+
+	if (!orc_1.is_live(level_orc, level)) {
+		cout << "YOU LOSE !!!!";
+		return -1;
+	}
+	cout << "YOU WIN!!!\n YOU GET LEVEL UP!!!\n";
 
 	level += 1;
 

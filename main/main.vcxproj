@@ -125,11 +125,15 @@
   <ItemGroup>
     <ClCompile Include="logic.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Monster.cpp" />
+    <ClCompile Include="Orc.cpp" />
     <ClCompile Include="player.cpp" />
     <ClCompile Include="goblin.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="logic.h" />
+    <ClInclude Include="Monster.h" />
+    <ClInclude Include="Orc.h" />
     <ClInclude Include="player.h" />
     <ClInclude Include="goblin.h" />
   </ItemGroup>
