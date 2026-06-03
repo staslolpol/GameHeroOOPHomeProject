@@ -6,9 +6,9 @@ goblin::goblin() {
 
 
 
-bool goblin::is_live(int level, int level_player) {
-	return this->level < level_player;
-}
+//bool goblin::is_live(int level, int level_player) {
+//	return this->level < level_player;
+//}
 int goblin::get_goblin_level() {
 	return level;
 }

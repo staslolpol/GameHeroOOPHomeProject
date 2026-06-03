@@ -21,6 +21,10 @@ int Monster::get_random_level(int level_player) {
 	return level;
 }
 
+bool Monster::is_live(int level, int level_player) {
+	return this->level < level_player;
+}
+
 string Monster::toString() {
 	return "Monster level = " + to_string(level);
 }

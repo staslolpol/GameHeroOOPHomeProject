@@ -15,7 +15,7 @@ public:
 	int get_goblin_level();
 
 
-	bool is_live(int level, int level_player);
+	//bool is_live(int level, int level_player);
 
 	void set_goblin_level(int level);
 

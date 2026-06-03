@@ -6,9 +6,9 @@ Orc::Orc() {
 
 
 
-bool Orc::is_live(int level, int level_player) {
-	return this->level < level_player;
-}
+//bool Orc::is_live(int level, int level_player) {
+//	return this->level < level_player;
+//}
 int Orc::get_orc_level() {
 	return level;
 }
